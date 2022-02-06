@@ -1,0 +1,29 @@
+<div class="mb-4">
+
+<form [formGroup]="myFormGroup" (ngSubmit)="onSubmit()">
+
+  <div class="mb-3">
+<label for="roomId">Id</label>
+<input type="text" formControlName="id" id="roomId" class="form-control">
+  </div>
+
+  <div class="mb-3">
+    <label for="roomTitle">Title</label>
+    <input type="text" formControlName="title" id="roomTitle" class="form-control">
+      </div>
+
+      <div class="mb-3 d-none">
+        <label for="roomImageUrl">Image url</label>
+        <input type="text" formControlName="imageUrl" id="roomImageUrl" class="form-control">
+          </div>
+
+          <div class="mb-3">
+            <label for="roomPrice">Price</label>
+            <input type="text" formControlName="price" id="roomPrice" class="form-control">
+              </div>
+
+              <input type="submit" value="Add room" class="btn btn-primary">
+
+</form>
+
+</div>
