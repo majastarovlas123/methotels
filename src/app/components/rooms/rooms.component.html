@@ -1,0 +1,15 @@
+<div class="row row-cols-4">
+
+  <div class="col" *ngFor="let room of rooms">
+
+    <div class="card">
+      <img src="{{ room.imageUrl }}" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">{{ room.title }}</h5>
+        <a href="#" class="btn btn-primary">{{ room.price }}</a>
+      </div>
+    </div>
+
+  </div>
+
+</div>
