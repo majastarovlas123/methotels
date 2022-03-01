@@ -22,4 +22,8 @@ export class RoomService {
 
     return of(this.rooms);
    }
+
+   addRoom(room:Room) {
+     this.rooms.push(room);
+   }
 }
