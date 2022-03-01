@@ -1,6 +1,8 @@
+<button (click)="shuffleArray()" class="btn btn-danger">Random sort</button>
+
 <div class="row row-cols-4">
 
-  <div class="col" *ngFor="let room of rooms">
+  <div class="col" *ngFor="let room of rooms | filter: price">
 
     <div class="card">
       <img src="{{ room.imageUrl }}" class="card-img-top">

@@ -1,11 +1,13 @@
 <div class="container mt-5">
 
-  <div class="row">
+  <app-filter [price]="this.price" (myOnChange)="this.price = $event.value"></app-filter>
+
+  <!-- <div class="row">
     <div class="col-4">
       <app-room-form></app-room-form>
     </div>
-  </div>
+  </div> -->
 
-  <app-rooms></app-rooms>
+  <app-rooms [price]="this.price"></app-rooms>
 
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Room } from 'src/app/models/room';
 import { RoomService } from 'src/app/services/room.service';
 
@@ -11,6 +11,8 @@ export class RoomsComponent implements OnInit {
 
   rooms: Room[];
 
+  @Input() price: number; //filter
+
   constructor(private roomService: RoomService) { }
 
   ngOnInit(): void {
@@ -19,6 +21,22 @@ export class RoomsComponent implements OnInit {
 
       this.rooms = rooms;
     });
+  }
+
+  shuffleArray() {
+    let currentIndex = this.rooms.length,  randomIndex;
+
+    // While there remain elements to shuffle...
+    while (currentIndex != 0) {
+
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+
+      // And swap it with the current element.
+      [this.rooms[currentIndex], this.rooms[randomIndex]] = [
+        this.rooms[randomIndex], this.rooms[currentIndex]];
+    }
   }
 
 }
