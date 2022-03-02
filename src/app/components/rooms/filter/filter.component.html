@@ -1,13 +1,9 @@
-<div class="mb-4">
+<form class="row">
 
-<form>
-
-<div class="mb-3">
-  <label for="roomSearch">Search (filter)</label>
-  <input type="text" name="roomPriceName" id="roomSearch" class="form-control" [(ngModel)]="price"
-  (ngModelChange)="change()">
-</div>
+  <div class="mb-3 col-4">
+    <label for="searchPrice">Search price</label>
+    <input type="text" name="nameSearch" id="searchPrice" class="form-control" [(ngModel)]="price"
+      (ngModelChange)="change()" placeholder="Room price...">
+  </div>
 
 </form>
-
-</div>
