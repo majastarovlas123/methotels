@@ -30,7 +30,13 @@ export class RoomFormComponent implements OnInit {
     });
   }
 
-  onSubmit() {
+  onAdd(canAdd: boolean) {
+    if (canAdd) {
+    this.onSubmit();
+    }
+  }
+
+  private onSubmit() {
 
     // add room
 

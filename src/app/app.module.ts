@@ -7,6 +7,7 @@ import { RoomFormComponent } from './components/rooms/room-form/room-form.compon
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FilterPipe } from './helpers/filter.pipe';
 import { FilterComponent } from './components/rooms/filter/filter.component';
+import { RoomAddComponent } from './components/rooms/room-add/room-add.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FilterComponent } from './components/rooms/filter/filter.component';
     RoomsComponent,
     RoomFormComponent,
     FilterPipe,
-    FilterComponent
+    FilterComponent,
+    RoomAddComponent
   ],
   imports: [
     BrowserModule,
