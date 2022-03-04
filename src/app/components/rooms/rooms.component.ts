@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Room } from 'src/app/models/room';
 import { RoomService } from 'src/app/services/room.service';
 
@@ -11,7 +11,9 @@ export class RoomsComponent implements OnInit {
 
   rooms: Room[];
 
-  @Input() price: number; //filter
+  @Input() price: number;
+
+  @Output() zaBrisanje: EventEmitter<any> = new EventEmitter();
 
   constructor(private roomService: RoomService) { }
 
@@ -29,6 +31,7 @@ export class RoomsComponent implements OnInit {
   onDelete(room: Room) {
 
     if(confirm('Da li zaista zelite da obrisete ovaj zapis?')) {
+      this.zaBrisanje.emit();
      this.roomService.deleteRoom(room);
     }
   }
