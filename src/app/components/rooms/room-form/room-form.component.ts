@@ -42,6 +42,8 @@ export class RoomFormComponent implements OnInit {
     }
 
      this.roomService.addRoom(room);
+
+     this.initForm();
   }
 
 }
