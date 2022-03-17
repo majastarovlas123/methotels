@@ -18,13 +18,18 @@ export class RoomService {
     ]
    }
 
+   /**
+    *
+    * Integrisanje pregleda soba kroz pogled (Observable)
+    */
+
    getRooms(): Observable<Room[]> {
     this.rooms = [
       { id: 1, title: 'Room1', imageUrl: 'assets/img/room.jpg', price: 10 },
       { id: 2, title: 'Room2', imageUrl: 'assets/img/room.jpg', price: 20 },
       { id: 3, title: 'Room3', imageUrl: 'assets/img/room.jpg', price: 30 },
     ]
-     return of(this.rooms);
+     return of(this.rooms); //vracanje observable<room[]>
    }
 
    addRoom(room:Room) {
